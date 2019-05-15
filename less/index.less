@@ -1,0 +1,454 @@
+em {
+    font-style: normal;
+}
+
+a {
+    color: #222222;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+input {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    /* height: 2000px; */
+    color: #222222;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.container {
+    padding: 0px;
+    margin: 0px;
+}
+
+.mk_col_md {
+    padding: 0 10%;
+}
+
+// nav头部
+.mk_nav {
+    background-color: #fff;
+    padding: 0 10%;
+
+    a {
+        color: #191919;
+    }
+
+    .navbar-default {
+        padding: 0px;
+        margin: 0px;
+        background-color: #fff;
+        border: none;
+
+        .container-fluid {
+            position: relative;
+        }
+
+        .navbar-header {
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+
+            .navbar-toggle {
+                position: absolute;
+                right: 0px;
+            }
+        }
+
+        .mail_container {
+            position: absolute;
+            right: 15px;
+            top: 0px;
+            width: 30%;
+
+            .mail {
+                height: 100px;
+                line-height: 100px;
+                overflow: hidden;
+
+                a {
+                    color: #999999;
+                }
+
+                .mail_system {
+                    float: left;
+
+                    .mail_system_img {
+                        height: 30px;
+                        width: 30px;
+                        // background-color: #999999;
+                    }
+                }
+
+                .mail_language {
+                    float: right;
+
+                    li {
+                        float: left;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            // 修改bootstrap默认样式
+            .search {
+                .form-control {
+                    box-shadow: 0 0 0 0;
+                    border: none;
+                    border-bottom: 1px solid #999999;
+                    border-radius: 0px;
+                }
+
+                .input-group-btn {
+                    border-bottom: 1px solid #999999;
+
+                    button {
+                        border: none;
+                    }
+
+                }
+
+                .input-group-btn>.btn:hover,
+                .input-group-btn>.btn:focus,
+                .input-group-btn>.btn:active {
+                    outline-color: transparent;
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover,
+    .navbar-default .navbar-nav>.active>a:focus {
+        color: #0056A6;
+        background-color: #fff;
+        border: transparent;
+    }
+}
+
+// 公司简介
+.mk_content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+
+    // 左边
+    .mk_content_li {
+        border: none;
+        // width: 100%;
+    }
+
+    a {
+        text-align: center;
+        font-size: 18px;
+        color: #222222;
+        padding: 0px;
+    }
+
+    .leftTab>.nav>li>a {
+        padding: 10px 10px;
+        border-bottom: 1px solid #B1B1B1;
+        margin-right: 0px;
+        border-radius: 0px;
+    }
+
+
+    .nav-tabs>li.active,
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:hover,
+    .nav-tabs>li.active>a:focus {
+        border: transparent;
+        background-color: #EDEDED;
+        border-radius: 0px;
+        color: #0056A6;
+    }
+
+    // 右边
+    .tab-content {
+        h3 {
+            margin: 0px;
+            padding: 0px;
+            color: #202020;
+            font-size: 36px;
+            text-align: center;
+            padding-bottom: 32px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #222222;
+            line-height: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .idea {
+            color: #222222;
+            font-size: 20px;
+            line-height: 40px;
+            padding-bottom: 30px;
+
+            p {
+                line-height: 40px;
+            }
+
+            ul,
+            li {
+                font-size: 17px;
+            }
+        }
+
+        .idea_title {
+            padding-bottom: 30px;
+
+            h4 {
+                font-size: 20px;
+                margin: 0px;
+                padding: 0px;
+                line-height: 36px;
+                color: #1561A4;
+            }
+
+            p {
+                line-height: 36px;
+            }
+
+            &:last-child {
+                padding-bottom: 0px;
+            }
+        }
+
+        // 荣誉资质
+        .qualification {
+            li {
+                height: 76px;
+                margin-bottom: 12px;
+                color: #222222;
+                font-size: 18px;
+                line-height: 76px;
+                position: relative;
+                background-color: #f0f0f0;
+
+                a {
+                    height: 100%;
+                    background-color: #f0f0f0;
+                    position: relative;
+                    padding: 0 0 0 20px;
+                }
+
+                .linkRightMenus {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+
+                }
+
+                &.active {
+                    background-color: #3483CD;
+                }
+
+            }
+
+            // 原本样式修改
+            .nav-pills>li.active>a,
+            .nav-pills>li.active>a:hover,
+            .nav-pills>li.active>a:focus {
+                background-color: #3483CD;
+            }
+
+        }
+
+        // 荣誉证书的显示与隐藏
+        // .Honor_certificate {}
+
+        .certificate_case {
+            .case_item {
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                padding-top: 10px;
+            }
+
+            .img {
+                height: 185px;
+                background-color: pink;
+            }
+        }
+
+        .pagenation {
+
+            // page页码的样式修改
+            .pagination>li>a,
+            .pagination>li>span {
+                margin-left: -1px;
+                line-height: 15px;
+                font-size: 15px;
+                color: #818181;
+                border: transparent;
+            }
+
+            .pagination>.active>a,
+            .pagination>.active>span,
+            .pagination>.active>a:hover,
+            .pagination>.active>span:hover,
+            .pagination>.active>a:focus,
+            .pagination>.active>span:focus {
+                background-color: #fff;
+                color: #0269C9;
+                font-size: 15px;
+                border-color: transparent;
+            }
+        }
+
+        // 资质证书的展示
+        .aptitude_table {
+            table {
+                width: 100%;
+            }
+
+            th {
+                text-align: center;
+                height: 47px;
+                font-size: 17px;
+                color: #202020;
+            }
+
+            td {
+                text-align: center;
+                height: 58px;
+                font-size: 15px;
+                color: #5E5E5E;
+            }
+        }
+    }
+}
+
+
+//底部
+.mk_footer {
+    background-color: #07467E;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10%;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    .footer_container {
+        border-bottom: 1px solid #c8c8c8;
+
+        .footer_item {
+            height: 80px;
+            line-height: 80px;
+            padding: 0px;
+            margin: 0px;
+            text-align: left;
+        }
+    }
+
+    .footer_bottom {
+        overflow: hidden;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+        a {
+            color: #fff;
+
+        }
+
+        .item {
+            padding: 0px;
+            text-align: center;
+            height: 68px;
+            line-height: 68px;
+
+            .item_line {
+                padding-left: 10%;
+            }
+        }
+    }
+
+    .footer_bottom_sn {
+        overflow: hidden;
+        text-align: center;
+    }
+
+}
+
+// 媒体查询
+@media(max-width:768px) {
+
+    // content中间部分
+    // 左边
+    .mk_content_li a {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    // 右边
+    .mk_min_addtop {
+        margin-top: 10px;
+    }
+
+    // 底部
+    .mk_col_md {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .mk_footer .footer_container .footer_item {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .mk_footer .footer_bottom {
+        width: 100%;
+    }
+
+    .mk_footer .footer_bottom {
+        font-size: 12px;
+    }
+
+    .mk_footer .footer_bottom .item .item_line {
+        text-align: right;
+
+    }
+}
+
+@media(max-width:360px) {
+    .mk_footer {
+        padding: 0px;
+        padding-left: 5px;
+    }
+
+    .mk_footer .footer_bottom {
+        font-size: 8px;
+    }
+
+
+}

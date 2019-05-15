@@ -157,7 +157,11 @@ body {
     // 左边
     .mk_content_li {
         border: none;
+
         // width: 100%;
+        &:first-child {
+            background-color: #EDEDED;
+        }
     }
 
     a {
@@ -169,6 +173,7 @@ body {
 
     .leftTab>.nav>li>a {
         padding: 10px 10px;
+        border: none;
         border-bottom: 1px solid #B1B1B1;
         margin-right: 0px;
         border-radius: 0px;
@@ -179,8 +184,6 @@ body {
     .nav-tabs>li.active>a,
     .nav-tabs>li.active>a:hover,
     .nav-tabs>li.active>a:focus {
-        border: transparent;
-        background-color: #EDEDED;
         border-radius: 0px;
         color: #0056A6;
     }

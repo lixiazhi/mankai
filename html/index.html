@@ -17,30 +17,7 @@
   <div class="header">
   </div>
   <!-- 轮播图区域 -->
-  <div class="mankai_banner">
-    <div id="carousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-        <li data-target="#carousel" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img data-msrc="../images/slide_01_640x340.jpg" data-psrc="../images/slide_01_2000x410.jpg" alt="..." />
-        </div>
-        <div class="item">
-          <img data-msrc="../images/slide_02_640x340.jpg" data-psrc="../images/slide_02_2000x410.jpg" alt="..." />
-        </div>
-        <div class="item">
-          <img data-msrc="../images/slide_03_640x340.jpg" data-psrc="../images/slide_03_2000x410.jpg" alt="..." />
-        </div>
-        <div class="item">
-          <img data-msrc="../images/slide_04_640x340.jpg" data-psrc="../images/slide_04_2000x410.jpg" alt="..." />
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="banner"></div>
   <!-- // 公司简介 -->
   <div class="mk_content mk_col_md">
     <div class="container">
@@ -452,6 +429,7 @@
        * 导航栏
        */
       $(".header").load("Header.html");
+      $(".banner").load("Banner.html");
       $(".footer").load("Footer.html");
     });
   </script>

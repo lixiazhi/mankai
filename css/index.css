@@ -122,6 +122,9 @@ body {
 .mk_content .mk_content_li {
   border: none;
 }
+.mk_content .mk_content_li:first-child {
+  background-color: #EDEDED;
+}
 .mk_content a {
   text-align: center;
   font-size: 18px;
@@ -130,6 +133,7 @@ body {
 }
 .mk_content .leftTab > .nav > li > a {
   padding: 10px 10px;
+  border: none;
   border-bottom: 1px solid #B1B1B1;
   margin-right: 0px;
   border-radius: 0px;
@@ -138,8 +142,6 @@ body {
 .mk_content .nav-tabs > li.active > a,
 .mk_content .nav-tabs > li.active > a:hover,
 .mk_content .nav-tabs > li.active > a:focus {
-  border: transparent;
-  background-color: #EDEDED;
   border-radius: 0px;
   color: #0056A6;
 }

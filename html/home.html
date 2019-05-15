@@ -8,27 +8,107 @@
     <title>首页</title>
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/common/header.css">
-    <link rel="stylesheet" href="../css/common/footer.css">
+    <!-- <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css"> -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
     <!-- 引入公共部分头部 -->
     <div class="header" id="header"></div>
     <!-- 引入公共部分头部结束 -->
-    <div class="company_container">这是我的公共部分</div>
+    <!-- 引入公共部分的banner -->
+    <div class="banner"></div>
+    <!-- 中间内容开始 -->
+    <div class="home_content clearfix ">
+        <div class="company_brief mk_col_md">
+            <h3 class="text-center">公司简介 <i>/</i> <span> Group Introduction</span></h3>
+            <div class="clearfix">
+                <div class="col-sm-12 col-md-6" style="padding-right:45px;">
+                    <div class="img" style="height:250px; background-color:pink"></div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h4>苏州曼凯系统集成科技有限公司</h4>
+                    <p class="txt-cut-6">
+                        苏州曼凯系统集成科技有限公司是一家主要从事建筑智能化系统集成、机电设备、暖通空调、空气净化工程、装饰装修工程、给排水工程、消防工程、房屋建筑、化工石油设备管道、管道工程、市政公用、环保工程的公司。我司原本为大连凯杰公司机电部门（2005年成立），于2015年再独立成子公司，注册资金为8000万元人民币，并且与台湾康呈公司交互投资。本科学历占64.8%…
+                    </p>
+                </div>
+            </div>
+            <div class="more_button hidden-sm text-center">
+                <button>more</button>
+            </div>
+        </div>
+        <div class="company_brief latest_news container_fluid">
+            <div class=" mk_col_md">
+                <h3 class="text-center">最新消息 <i>/</i> <span> Group Introduction</span></h3>
+                <div class="news_list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <span class="date">2019</span>
+                                    <span class="month">02/26</span>
+                                </div>
+                                <div class="item-center clearfix">
+                                    自强不息，共筑梦想 一记华南区域2018年度基层优秀员工集中式培训
+                                </div>
+                                <div class="item_right pull-right">
+                                    <i class="glyphicon glyphicon-menu-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div class="pull-left">
+                                    <span class="date">2019</span>
+                                    <span class="month">02/26</span>
+                                </div>
+                                <div class="item-center clearfix">
+                                    自强不息，共筑梦想 一记华南区域2018年度基层优秀员工集中式培训
+                                </div>
+                                <div class="item_right pull-right">
+                                    <i class="glyphicon glyphicon-menu-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="pull-left">
+                                    <span class="date">2019</span>
+                                    <span class="month">02/26</span>
+                                </div>
+                                <div class="item-center clearfix">
+                                    自强不息，共筑梦想 一记华南区域2018年度基层优秀员工集中式培训
+                                </div>
+                                <div class="item_right pull-right">
+                                    <i class="glyphicon glyphicon-menu-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more_button hidden-sm text-center">
+                    <button class="news">more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中间内容结束 -->
     <!-- 引入公共部分底部 -->
     <div class="footer"></div>
     <!-- 引入公共部分底部结束 -->
 </body>
 <script src="../lib/jquery/jquery-1.12.4.js"></script>
 <script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
 <script>
     $(function () {
         /*公共部分
          * 导航栏
          */
         $("#header").load("Header.html");
+        $(".banner").load("Banner.html");
         $(".footer").load("Footer.html");
     });
 </script>

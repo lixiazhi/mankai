@@ -1,0 +1,46 @@
+.home_content {
+  color: #222222;
+}
+.home_content .company_brief {
+  padding-bottom: 70px;
+}
+.home_content .company_brief h3 {
+  font-size: 36px;
+  color: #353535;
+  height: 186px;
+  line-height: 186px;
+}
+.home_content .company_brief h3 span {
+  color: #181818;
+  font-size: 24px;
+}
+.home_content .company_brief h4 {
+  font-size: 22px;
+  height: 66px;
+  line-height: 66px;
+}
+.home_content .company_brief p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.home_content .more_button {
+  padding-top: 60px;
+}
+.home_content .more_button button {
+  background: #868686;
+  color: #fff;
+  height: 52px;
+  width: 180px;
+  font-size: 18px;
+}
+.home_content .more_button button.news {
+  background-color: #D9ECF9;
+  color: #181818;
+}
+.home_content .latest_news {
+  background-color: #D9ECF9;
+}
+.home_content .latest_news h3 {
+  height: 180px;
+  line-height: 180px;
+}

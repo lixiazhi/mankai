@@ -40,6 +40,43 @@ $(function () {
  资质荣誉点击修改active样式
 */
 $(function () {
+  // 荣誉证书
+  if (window.location.hash == '#Honor_certificate') {
+    $('.Honor').removeClass('show')
+    $('.Honor').addClass('hidden')
+    $('#aptitude_certificate').removeClass('show')
+    $('#aptitude_certificate').addClass('hidden')
+    $('#Honor_certificate').removeClass('hidden')
+    $('#Honor_certificate').addClass('show')
+    // 资质证书
+  } else if (window.location.hash == '#aptitude_certificate') {
+    $('.Honor').removeClass('show')
+    $('.Honor').addClass('hidden')
+    $('#Honor_certificate').removeClass('show')
+    $('#Honor_certificate').addClass('hidden')
+    $('#aptitude_certificate').removeClass('hidden')
+    $('#aptitude_certificate').addClass('show')
+  }
+  // 路由标识
+  // 页面获取存储在sessionStorage中
+  // 刷新页面时先从sessionStorage中获取
+  const contentTabUrl = JSON.parse(sessionStorage.getItem('contentTabUrl'))
+  console.log(contentTabUrl);
+  if (contentTabUrl) {
+    $('.mk_content .nav-wrapper>ul>li').each(function (index, item) {
+      $(item).removeClass('active')
+      if ($(this).data('contenttaburl') === contentTabUrl) {
+        $(this).addClass('active')
+        // 对应右侧tab添加active
+        const activeA = $(this).find('a').attr('href')
+        $('.tab-content>.tab-pane').removeClass('active')
+        $(activeA).addClass('active')
+      }
+    })
+  }
+  $('.mk_content .nav-wrapper>ul>li').on('click', function () {
+    sessionStorage.setItem('contentTabUrl', JSON.stringify($(this).data('contenttaburl')))
+  })
   // 点击时存储id
   $('.tab-content .qualification>ul>li').find('a').on('click', function () {
     $('.Honor').toggleClass('hidden')

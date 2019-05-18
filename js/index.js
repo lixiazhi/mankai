@@ -54,18 +54,23 @@ $(function () {
     $('#Honor_certificate').addClass('hidden')
     $('#aptitude_certificate').removeClass('hidden')
     $('#aptitude_certificate').addClass('show')
+    // 点击左边tab栏的时候切换 ==== 80行
   }
+
   // 路由标识
   // 页面获取存储在sessionStorage中
   // 刷新页面时先从sessionStorage中获取
   const contentTabUrl = sessionStorage.getItem('contentTabUrl')
   if (contentTabUrl) {
     $('.mk_content .nav-wrapper>ul>li').each(function (index, item) {
-      $(this).removeClass('active')
+      // $(this).removeClass('active')
       if ($(this).data('contenttaburl') == contentTabUrl) {
+        $('.mk_content .nav-wrapper>ul>li').removeClass('active')
         $(this).addClass('active')
         // 对应右侧tab添加active
-        const activeA = $(this).find('a').attr('href')
+        const activeA = $(this)
+          .find('a')
+          .attr('href')
         $('.tab-content>.tab-pane').removeClass('active')
         $(activeA).addClass('active')
       }
@@ -74,14 +79,20 @@ $(function () {
   // 点击tan栏时存储sessionStorage
   $('.mk_content .nav-wrapper>ul>li').on('click', function () {
     sessionStorage.setItem('contentTabUrl', $(this).data('contenttaburl'))
+    if ($(this).data('contenttaburl') == 'index6') {
+      $('.Honor').removeClass('hidden')
+      $('.Honor').addClass('show')
+      $('.Honor').siblings().removeClass('show')
+      $('.Honor').siblings().addClass('hidden')
+    }
   })
   // 点击时存储id
   $('.tab-content .qualification>ul>li')
     .find('a')
     .on('click', function () {
-      console.log($(this).attr('href'));
-
-      $('.Honor').toggleClass('hidden')
-      $(`.${$(this).data('url')}`).toggleClass('hidden')
+      $('.Honor').removeClass('show')
+      $('.Honor').addClass('hidden')
+      $(`.${$(this).data('url')}`).removeClass('hidden')
+      $(`.${$(this).data('url')}`).addClass('show')
     })
 })

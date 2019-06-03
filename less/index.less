@@ -44,99 +44,97 @@ body {
     padding: 0 10%;
 }
 
+// 轮播图
+.banner {
+    .carousel-indicators {
+        bottom: 0px;
+    }
+}
+
 // nav头部
+// 邮箱删除
+// .mail_container {
+//     position: absolute;
+//     right: 15px;
+//     top: 0px;
+//     width: 30%;
+
+//     .mail {
+//         height: 100px;
+//         line-height: 100px;
+//         overflow: hidden;
+
+//         a {
+//             color: #999999;
+//         }
+
+//         .mail_system {
+//             float: left;
+
+//             .mail_system_img {
+//                 height: 30px;
+//                 width: 30px;
+//                 // background-color: #999999;
+//             }
+//         }
+
+//         .mail_language {
+//             float: right;
+
+//             li {
+//                 float: left;
+//                 margin-left: 10px;
+//             }
+//         }
+//     }
+
+//     // 修改bootstrap默认样式
+//     .search {
+//         .form-control {
+//             box-shadow: 0 0 0 0;
+//             border: none;
+//             border-bottom: 1px solid #999999;
+//             border-radius: 0px;
+//         }
+
+//         .input-group-btn {
+//             border-bottom: 1px solid #999999;
+
+//             button {
+//                 border: none;
+//             }
+
+//         }
+
+//         .input-group-btn>.btn:hover,
+//         .input-group-btn>.btn:focus,
+//         .input-group-btn>.btn:active {
+//             outline-color: transparent;
+//             background-color: #fff;
+//         }
+//     }
+// }
+
+
+/* 导航的样式 */
 .mk_nav {
-    background-color: #fff;
     padding: 0 10%;
 
-    a {
-        color: #191919;
+    .navbar-default {
+        margin: 0;
+        border: none;
+        background-color: #fff;
     }
 
-    .navbar-default {
-        padding: 0px;
-        margin: 0px;
-        background-color: #fff;
-        border: none;
+    .navbar-brand {
+        height: 80px;
+        line-height: 80px;
+        width: 200px;
+        text-align: center;
+    }
 
-        .container-fluid {
-            position: relative;
-        }
-
-        .navbar-header {
-            height: 100px;
-            width: 100%;
-            overflow: hidden;
-            text-align: center;
-
-            .navbar-toggle {
-                position: absolute;
-                right: 0px;
-            }
-        }
-
-        .mail_container {
-            position: absolute;
-            right: 15px;
-            top: 0px;
-            width: 30%;
-
-            .mail {
-                height: 100px;
-                line-height: 100px;
-                overflow: hidden;
-
-                a {
-                    color: #999999;
-                }
-
-                .mail_system {
-                    float: left;
-
-                    .mail_system_img {
-                        height: 30px;
-                        width: 30px;
-                        // background-color: #999999;
-                    }
-                }
-
-                .mail_language {
-                    float: right;
-
-                    li {
-                        float: left;
-                        margin-left: 10px;
-                    }
-                }
-            }
-
-            // 修改bootstrap默认样式
-            .search {
-                .form-control {
-                    box-shadow: 0 0 0 0;
-                    border: none;
-                    border-bottom: 1px solid #999999;
-                    border-radius: 0px;
-                }
-
-                .input-group-btn {
-                    border-bottom: 1px solid #999999;
-
-                    button {
-                        border: none;
-                    }
-
-                }
-
-                .input-group-btn>.btn:hover,
-                .input-group-btn>.btn:focus,
-                .input-group-btn>.btn:active {
-                    outline-color: transparent;
-                    background-color: #fff;
-                }
-            }
-        }
-
+    .navbar-nav>li>a {
+        line-height: 80px;
     }
 
     .navbar-default .navbar-nav>.active>a,
@@ -146,13 +144,29 @@ body {
         background-color: #fff;
         border: transparent;
     }
+
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:focus {
+        // border-bottom: 3px solid #e92322;
+        border-bottom: transparent;
+    }
+
+    .navbar-toggle {
+        margin-top: 23px;
+        margin-bottom: 23px;
+    }
 }
+
 
 // 公司简介
 .mk_content {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     overflow: hidden;
+
+    .nav-tabs {
+        border-bottom: transparent;
+    }
 
     // 左边
     .mk_content_li {
@@ -406,6 +420,15 @@ body {
 // 媒体查询
 @media(max-width:768px) {
 
+    // 头部ad的line-height缩小
+    .mk_nav .navbar-nav>li>a {
+        line-height: 40px;
+    }
+
+    .mk_content {
+        padding-top: 10px;
+    }
+
     // content中间部分
     // 左边
     .mk_content_li a {
@@ -452,6 +475,4 @@ body {
     .mk_footer .footer_bottom {
         font-size: 8px;
     }
-
-
 }

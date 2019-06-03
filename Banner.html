@@ -1,0 +1,44 @@
+  <!-- 轮播图区域 -->
+  <div class="mankai_banner clearfix">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators hidden-xs">
+              <li data-target="#carousel" data-slide-to="0" class="active" data-pathurl='/home.html'></li>
+              <li data-target="#carousel" data-slide-to="1" data-pathurl='/index.html'></li>
+              <li data-target="#carousel" data-slide-to="2" data-pathurl='/engineering.html'></li>
+              <li data-target="#carousel" data-slide-to="3" data-pathurl='/hiring.html'></li>
+              <li data-target="#carousel" data-slide-to="4" data-pathurl='/contact.html'></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="item" data-pathurl='/home.html'>
+                  <img data-msrc="./images/img_2.jpg" data-psrc="./images/img_2.jpg" alt="..." />
+              </div>
+              <div class="item active" data-pathurl='/engineering.html'>
+                  <img data-msrc="./images/img_3.jpg" data-psrc="./images/img_3.jpg" alt="..." />
+              </div>
+              <div class="item" data-pathurl='/hiring.html'>
+                  <img data-msrc="./images/img_4.jpg" data-psrc="./images/img_4.jpg" alt="..." />
+              </div>
+              <div class="item" data-pathurl='/contact.html'>
+                  <img data-msrc="./images/img_5.jpg" data-psrc="./images/img_5.jpg" alt="..." />
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="./js/banner.js"></script>
+  <script>
+      const windowUrl = window.location.pathname
+      //   console.log(windowUrl);
+      $('.carousel-inner >div.item').each(function (index, item) {
+          $(item).removeClass('active')
+          if ($(this).data('pathurl') == windowUrl) {
+              $('.carousel-inner >div.item').removeClass('active')
+              $(this).addClass('active')
+          }
+      })
+      $('.carousel-indicators > li').each(function (index, item) {
+          $(item).removeClass('active')
+          if ($(this).data('pathurl') == windowUrl) {
+              $(this).addClass('active')
+          }
+      })
+  </script>

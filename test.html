@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css" />
+</head>
+
+<body>
+    <div class="code-box">
+        <p class="code-num" id="codeNum" style="display: none">655555</p>
+        <textarea id="input" style="display: none"></textarea>
+        <button class="code-btn copy" id="codeBtn" data-clipboard-target="#input">
+            打开标签微信
+        </button>
+</body>
+<script src="./lib/jquery/jquery-1.12.4.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/test/clipboard.min.js"></script>
+<script>
+    $('.code-btn').click(function () {
+        let e = document.getElementById('codeNum').innerText
+        let t = document.getElementById('input')
+        t.value = e
+        //实例化clipboard
+        var clipboard = new ClipboardJS('#codeBtn')
+        clipboard.on('success', function (e) {
+            $('.alertMsg').html('复制成功！')
+            $('.modal-bg').css('display', 'block')
+            e.clearSelection()
+            setTimeout(() => {
+                testApp('weixin://')
+            }, 1000)
+        })
+        clipboard.on('error', function (e) {
+            $('.alertMsg').html('请选择“拷贝”进行复制!')
+            $('.modal-bg').css('display', 'block')
+        })
+    })
+
+    function testApp(url) {
+        var timeout,
+            t = 1000,
+            hasApp = true
+        var t1 = Date.now()
+        var ifr = document.createElement('iframe')
+        ifr.setAttribute('src', url)
+        ifr.setAttribute('style', 'display:none')
+        document.body.appendChild(ifr)
+    }
+</script>
+
+</html>

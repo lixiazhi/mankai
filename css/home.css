@@ -47,17 +47,7 @@
 .home_content .latest_news .news_list {
   padding: 0 15px;
 }
-.home_content .latest_news .news_list .nav-pills > li > a {
-  border-radius: 0px;
-  padding: 0px;
-}
-.home_content .latest_news .news_list .nav-pills > li.active > a,
-.home_content .latest_news .news_list .nav-pills > li.active > a:hover,
-.home_content .latest_news .news_list .nav-pills > li.active > a:focus {
-  color: #fff;
-}
 .home_content .latest_news .news_list li {
-  height: 76px;
   background-color: #fff;
   font-size: 18px;
   margin-bottom: 12px;
@@ -78,11 +68,10 @@
   font-size: 24px;
 }
 .home_content .latest_news .news_list li .news_content {
-  height: 76px;
-  line-height: 76px;
   padding: 0 20px;
   color: #222222;
   font-size: 18px;
+  padding-top: 25px;
 }
 .home_content .latest_news .news_list li .news_content .news_content_icon {
   color: #1484ec;
@@ -95,4 +84,19 @@
 }
 .home_content .latest_news .news_list li.active .news_content_icon {
   color: #ffffff;
+}
+.home_content .latest_news .news_list .nav-pills > li.active > a,
+.home_content .latest_news .news_list .nav-pills > li.active > a:hover,
+.home_content .latest_news .news_list .nav-pills > li.active > a:focus {
+  color: #fff;
+}
+.home_content .latest_news .news_list .nav-pills > li > a {
+  border-radius: 0px;
+  padding: 0px;
+  padding-bottom: 9px;
+}
+@media (max-width: 768px) {
+  .home_content .latest_news .news_list li .news_date {
+    border-right: none;
+  }
 }
